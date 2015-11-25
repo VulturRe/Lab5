@@ -18,5 +18,16 @@ namespace Lab5
             foreach (var s in str)
                 CharList.Add(Convert.ToChar(s));
         }
+
+        public void Add(char ch)
+        {
+            CharList.Add(ch);
+        }
+
+        public static SetOfChar operator +(SetOfChar set, char ch)
+        {
+            set.Add(ch);
+            return set;
+        }
     }
 }
