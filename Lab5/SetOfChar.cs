@@ -6,7 +6,7 @@ namespace Lab5
 {
     class SetOfChar
     {
-        protected List<char> CharList;
+        protected List<char> CharList { get; }
 
         public SetOfChar(char ch)
         {
@@ -29,6 +29,13 @@ namespace Lab5
         {
             set.Add(ch);
             return set;
+        }
+
+        public static SetOfChar operator +(SetOfChar set1, SetOfChar set2)
+        {
+            foreach (var c in set2.CharList)
+                set1.Add(c);
+            return set1;
         }
 
         public override string ToString()
