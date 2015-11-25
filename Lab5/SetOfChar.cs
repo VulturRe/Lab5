@@ -53,5 +53,17 @@ namespace Lab5
             var str = CharList.Aggregate("", (current, s) => current + (s + " "));
             return str;
         }
+
+        public string DisplayMenu()
+        {
+            Console.WriteLine("1. Ввести первое и второе множества.");
+            Console.WriteLine("2. Объединить множества.");
+            Console.WriteLine("3. Сравнить множества.");
+            Console.WriteLine("4. Добавить элемент в множество.");
+            Console.WriteLine("5. Выход.");
+
+            var cki = Console.ReadKey(false);
+            return cki.KeyChar.ToString();
+        }
     }
 }
