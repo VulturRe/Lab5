@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lab5
 {
@@ -28,6 +29,12 @@ namespace Lab5
         {
             set.Add(ch);
             return set;
+        }
+
+        public override string ToString()
+        {
+            var str = CharList.Aggregate("", (current, s) => current + (s + " "));
+            return str;
         }
     }
 }
