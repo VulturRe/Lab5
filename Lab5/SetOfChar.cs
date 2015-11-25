@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Lab5
 {
@@ -36,6 +37,16 @@ namespace Lab5
             foreach (var c in set2.CharList)
                 set1.Add(c);
             return set1;
+        }
+
+        public static bool operator ==(SetOfChar set1, SetOfChar set2)
+        {
+            return set1.CharList.Equals(set2.CharList);
+        }
+
+        public static bool operator !=(SetOfChar set1, SetOfChar set2)
+        {
+            return !set1.CharList.Equals(set2.CharList);
         }
 
         public override string ToString()
