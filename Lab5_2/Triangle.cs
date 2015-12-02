@@ -4,9 +4,9 @@ namespace Lab5_2
 {
     class Triangle
     {
-        private double _firstSide;
-        private double _secondSide;
-        private double _thirdSide;
+        private readonly double _firstSide;
+        private readonly double _secondSide;
+        private readonly double _thirdSide;
 
         public Triangle(double firstSide, double secondSide, double thirdSide)
         {
