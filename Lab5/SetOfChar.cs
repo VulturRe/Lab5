@@ -107,6 +107,7 @@ namespace Lab5
     {
         static void Main()
         {
+            Console.Title = "Lab5";
             string userInput;
             SetOfChar set1 = null, set2 = null;
 
